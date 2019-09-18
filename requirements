@@ -10,13 +10,13 @@ Functional requirements
 	1.2 The system shall have category tabs that the user can select
 	1.3 The system shall display a picture and title for the news article
 
-2. The system shall allow users to bookmark news
+2. The bookmark function shall allow users to bookmark news
 
-3. The system shall allow users to search for news
+3. The search function shall allow users to search for news
 
-4. The system shall allow the user to share news
+4. The share function shall allow the user to share news
 
-5. The system should allow the user to change from light theme to dark theme
+5. The change theme function should allow the user to switch between light theme and dark theme
 
 
 
