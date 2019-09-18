@@ -11,6 +11,10 @@ Functional requirements
 	1.3 The system shall display a picture and title for the news articles.
 
 2. The bookmark function shall allow users to bookmark news.
+	2.1 The system shall display all bookmarked news
+	2.2 The system shall display bookmarked news by article title
+	2.3 The system shall allow users to add a bookmark
+	2.4 The system shall allow users to delete a bookmark
 
 3. The search function shall allow users to search for news.
 
