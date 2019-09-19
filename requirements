@@ -23,13 +23,10 @@ Functional requirements
 	
 4. The share function shall allow the user to share news.
 	4.1 The system shall provide a button for the user in order to share the news link.
-	4.2 The system shall allow the user to choose their preferered medium of sharing the link such as email, text, etc.
+	4.2 The system shall allow the user to choose their preferred medium of sharing the link such as email, text, etc.
 	4.3 The system shall successfully send the link through the medium chosen by the user.
 
 5. The view function shall allow the user to view the full news article.
-	5.1 The system shall successfully expand the article the user chooses.
-	5.2 The system shall allow the user to scroll through the article.
-	5.3 The system shall allow the user to zoom in any part of the article and/or relevant images.
 
 6. The change theme function should allow the user to switch between light theme and dark theme.
 
