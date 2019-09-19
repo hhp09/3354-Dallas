@@ -23,7 +23,9 @@ Functional requirements
 	
 4. The share function shall allow the user to share news.
 
-5. The change theme function should allow the user to switch between light theme and dark theme.
+5. The view function shall allows the user to view the full news article.
+
+6. The change theme function should allow the user to switch between light theme and dark theme.
 
 
 
