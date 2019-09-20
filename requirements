@@ -32,7 +32,8 @@ Functional requirements
 	5.3 The system shall allow the user to zoom in on any part of the article, including images.
 
 6. The change theme function should allow the user to switch between light theme and dark theme.
-
+	6.1 The system should have a button for settings
+	6.2 The system should have a setting that toggles light and dark themes
 
 
 Use Case Diagram
