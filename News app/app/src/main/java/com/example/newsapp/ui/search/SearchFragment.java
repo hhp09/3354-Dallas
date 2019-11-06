@@ -13,7 +13,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.newsapp.R;
-import com.example.newsapp.ui.dashboard.DashboardViewModel;
+import com.example.newsapp.ui.search.SearchViewModel;
 
 public class SearchFragment extends Fragment {
 

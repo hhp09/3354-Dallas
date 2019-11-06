@@ -18,8 +18,8 @@
         tools:layout="@layout/fragment_search" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.example.newsapp.ui.notifications.NotificationsFragment"
+        android:id="@+id/navigation_saved"
+        android:name="com.example.newsapp.ui.saved.SavedFragment"
         android:label="News App"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_saved" />
 </navigation>
