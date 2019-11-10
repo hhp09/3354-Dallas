@@ -27,4 +27,13 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(navView, navController);
     }
 
+    // API key to authenticate calls to News API
+    String News_API_Key = "47da75493074479c95323798e6a853ea";
+
+    // default source set to The Verge for now
+    // note: implement breaking news first, and then isolate genres adding user functionality
+    String News_Sources = "the-verge";
+
+
+
 }
