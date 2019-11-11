@@ -10,6 +10,20 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+// missing import statements
+import java.util.ArrayList;
+import java.util.HashMap;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+import android.content.Intent;
+import android.os.AsyncTask;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ListView;
+import android.widget.ProgressBar;
+import android.widget.Toast;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -62,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
         protected void onPreExecute() { super.onPreExecute(); }
 
         protected String doInBackground(String... args) {
-            String xml = Function.excuteGet("https://newsapi.org/v1/articles?source=" + NEWS_SOURCE + "&sortBy=top&apiKey=" + API_KEY);
+            String xml = Function.excuteGet("https://newsapi.org/v1/articles?source=" + News_Sources + "&sortBy=top&apiKey=" + News_API_Key);
             return xml;
         }
 
