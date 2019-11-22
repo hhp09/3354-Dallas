@@ -7,13 +7,21 @@
     android:layout_height="match_parent"
     tools:context=".Search">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/editText"
+        android:padding="15sp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Search"
-        android:textSize="50sp"
-        android:textStyle="bold"
-        android:layout_centerInParent="true"/>
+        android:hint="Type Key Word" />
+
+    <Button
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText"
+        android:id="@+id/submit"
+        android:text="Submit"
+        android:textSize="20sp" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
