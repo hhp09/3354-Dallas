@@ -1,18 +1,26 @@
 package com.example.newsappv3;
+// This is the Search Activity that allows the user search
+// for articles based on keywords
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class Search extends AppCompatActivity {
+
+    Button submitButton;
+    EditText et;
+    String str;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +28,27 @@ public class Search extends AppCompatActivity {
         setContentView(R.layout.activity_search);
 
         setTitle("Search");
+
+        // Search Bar that takes user input
+        submitButton = findViewById(R.id.submit);
+        et = findViewById(R.id.editText);
+        submitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Search.this , SearchArticlePreview.class);
+                str = et.getText().toString();
+                // Validate for empty user input
+                if (TextUtils.isEmpty(str.trim())) {
+                    Toast toast= Toast. makeText(getApplicationContext(),"Invalid Input",Toast. LENGTH_SHORT);
+                    toast.show();
+                }
+                else
+                {
+                    i.putExtra("keyWord" , str);
+                    startActivity(i);
+                }
+            }
+        });
 
         //Initialize and assign variable
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);

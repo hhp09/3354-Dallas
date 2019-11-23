@@ -6,28 +6,30 @@ package com.example.newsappv3;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.os.AsyncTask;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-import java.util.ArrayList;
-import java.util.HashMap;
-
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class MainActivity extends AppCompatActivity {
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 
-    String API_KEY = "47da75493074479c95323798e6a853ea"; // secret key
+public class SearchArticlePreview extends AppCompatActivity {
+
+    String API_KEY = "47da75493074479c95323798e6a853ea";
+    String keyWord;
     ListView listNews;
     ProgressBar loader;
 
@@ -43,19 +45,26 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        setTitle("Home");
+        setContentView(R.layout.activity_search_article_preview);
 
+        keyWord = getIntent().getExtras().getString("keyWord");
         listNews = findViewById(R.id.listNews);
         loader = findViewById(R.id.loader);
         listNews.setEmptyView(loader);
 
+        // Download news if network is available
+        if (SharedFunctions.isNetworkAvailable(getApplicationContext())) {
+            DownloadNews newsTask = new DownloadNews();
+            newsTask.execute();
+        } else {
+            Toast.makeText(getApplicationContext(), "No Internet Connection", Toast.LENGTH_LONG).show();
+        }
 
         //Initialize and assign variable
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 
-        //Set Home to selected
-        bottomNavigationView.setSelectedItemId(R.id.home);
+        //Set Search to selected
+        bottomNavigationView.setSelectedItemId(R.id.search);
 
         //Perform ItemSelectedListener
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -64,10 +73,10 @@ public class MainActivity extends AppCompatActivity {
                 switch (menuItem.getItemId())
                 {
                     case R.id.home:
+                        startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                        overridePendingTransition(0, 0);
                         return true;
                     case R.id.search:
-                        startActivity(new Intent(getApplicationContext(), Search.class));
-                        overridePendingTransition(0, 0);
                         return true;
                     case R.id.saved:
                         startActivity(new Intent(getApplicationContext(), Save.class));
@@ -77,15 +86,6 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
         });
-
-        // Check if network is available
-        if (SharedFunctions.isNetworkAvailable(getApplicationContext())) {
-            // If the network is available download the news
-            DownloadNews newsTask = new DownloadNews();
-            newsTask.execute();
-        } else {
-            Toast.makeText(getApplicationContext(), "Unable to connect to NewsAPI!", Toast.LENGTH_LONG).show();
-        }
     }
 
     class DownloadNews extends AsyncTask<String, Void, String> {
@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Perform a Get on the Given URL
         protected String doInBackground(String... args) {
-            String xml = SharedFunctions.excuteGet("https://newsapi.org/v2/top-headlines?country=us&apiKey=" + API_KEY);
+            String xml = SharedFunctions.excuteGet("https://newsapi.org/v2/everything?" + "q=" + keyWord + "&apiKey=" + API_KEY);
             return xml;
         }
 
@@ -125,20 +125,20 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 // Populate the Article preview view
-                ArticlePreview adapter = new ArticlePreview(MainActivity.this, dataList);
+                ArticlePreview adapter = new ArticlePreview(SearchArticlePreview.this, dataList);
                 listNews.setAdapter(adapter);
 
                 // Listener for Article clicks
                 listNews.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                    public void onItemClick(AdapterView<?> parent, View view,
-                                            int position, long id) {
-                        Intent i = new Intent(MainActivity.this, DisplayFullArticle.class);
-                        i.putExtra("url", dataList.get(+position).get(KEY_URL)); // Pass the Full article URL
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                        Intent i = new Intent(SearchArticlePreview.this, DisplayFullArticle.class);
+                        i.putExtra("url", dataList.get(+position).get(KEY_URL));
                         startActivity(i);
                     }
                 });
+
             } else {
-                Toast.makeText(getApplicationContext(), "Unable to find any articles!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "No news found", Toast.LENGTH_SHORT).show();
             }
         }
     }
