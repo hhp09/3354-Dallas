@@ -63,6 +63,7 @@ class ArticlePreview extends BaseAdapter {
 
         // Populate the article list view
         try{
+
             holder.author.setText(map.get(MainActivity.KEY_AUTHOR));
             holder.title.setText(map.get(MainActivity.KEY_TITLE));
             holder.time.setText(map.get(MainActivity.KEY_PUBLISHEDAT));
@@ -74,6 +75,7 @@ class ArticlePreview extends BaseAdapter {
                     .resize(300, 200)
                     .centerCrop()
                     .into(holder.galleryImage);
+
 
         } catch(Exception e) {}
         return convertView;

@@ -28,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     String API_KEY = "47da75493074479c95323798e6a853ea"; // secret key
-    String NEWS_SOURCE = "techcrunch";
     ListView listNews;
     ProgressBar loader;
 
@@ -95,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Perform a Get on the Given URL
         protected String doInBackground(String... args) {
-            String xml = SharedFunctions.excuteGet("https://newsapi.org/v1/articles?source=" + NEWS_SOURCE + "&sortBy=top&apiKey=" + API_KEY);
+            String xml = SharedFunctions.excuteGet("https://newsapi.org/v2/top-headlines?country=us&apiKey=" + API_KEY);
             return xml;
         }
 
