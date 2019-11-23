@@ -26,7 +26,9 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
-    String API_KEY = "47da75493074479c95323798e6a853ea"; // secret key
+
+    String API_KEY = ""
+    String NEWS_SOURCE = "techcrunch"; 
     ListView listNews;
     ProgressBar loader;
 
@@ -49,12 +51,6 @@ public class MainActivity extends AppCompatActivity {
         loader = findViewById(R.id.loader);
         listNews.setEmptyView(loader);
 
-        if (SharedFunctions.isNetworkAvailable(getApplicationContext())) {
-            DownloadNews newsTask = new DownloadNews();
-            newsTask.execute();
-        } else {
-            Toast.makeText(getApplicationContext(), "Unable to connect to NewsAPI!", Toast.LENGTH_LONG).show();
-        }
 
         //Initialize and assign variable
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
@@ -82,6 +78,13 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
         });
+
+        if (SharedFunctions.isNetworkAvailable(getApplicationContext())) {
+            DownloadNews newsTask = new DownloadNews();
+            newsTask.execute();
+        } else {
+            Toast.makeText(getApplicationContext(), "Unable to connect to NewsAPI!", Toast.LENGTH_LONG).show();
+        }
     }
 
     class DownloadNews extends AsyncTask<String, Void, String> {
@@ -89,8 +92,7 @@ public class MainActivity extends AppCompatActivity {
         protected void onPreExecute() { super.onPreExecute(); }
 
         protected String doInBackground(String... args) {
-            // Documentation provides us with endpoint link to contact, we are appending our key to the end of link
-            String xml = SharedFunctions.excuteGet("https://newsapi.org/v2/top-headlines?country=us&apiKey=" + API_KEY);
+            String xml = SharedFunctions.excuteGet("https://newsapi.org/v1/articles?source=" + NEWS_SOURCE + "&sortBy=top&apiKey=" + API_KEY);
             return xml;
         }
 
@@ -125,7 +127,7 @@ public class MainActivity extends AppCompatActivity {
                 listNews.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     public void onItemClick(AdapterView<?> parent, View view,
                                             int position, long id) {
-                        Intent i = new Intent(MainActivity.this, DetailsActivity.class);
+                        Intent i = new Intent(MainActivity.this, DisplayFullArticle.class);
                         i.putExtra("url", dataList.get(+position).get(KEY_URL));
                         startActivity(i);
                     }
