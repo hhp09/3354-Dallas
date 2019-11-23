@@ -27,8 +27,8 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class MainActivity extends AppCompatActivity {
 
 
-    String API_KEY = ""
-    String NEWS_SOURCE = "techcrunch"; 
+    String API_KEY = "47da75493074479c95323798e6a853ea"; // secret key
+    String NEWS_SOURCE = "techcrunch";
     ListView listNews;
     ProgressBar loader;
 
@@ -79,7 +79,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // Check if network is available
         if (SharedFunctions.isNetworkAvailable(getApplicationContext())) {
+            // If the network is available download the news
             DownloadNews newsTask = new DownloadNews();
             newsTask.execute();
         } else {
@@ -91,6 +93,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onPreExecute() { super.onPreExecute(); }
 
+        // Perform a Get on the Given URL
         protected String doInBackground(String... args) {
             String xml = SharedFunctions.excuteGet("https://newsapi.org/v1/articles?source=" + NEWS_SOURCE + "&sortBy=top&apiKey=" + API_KEY);
             return xml;
@@ -99,13 +102,14 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(String xml) {
 
-            if (xml.length() > 10) {
+            // Check that articles were received
+            if (xml.length() > 0) {
 
                 try {
                     JSONObject jsonResponse = new JSONObject(xml);
                     JSONArray jsonArray = jsonResponse.optJSONArray("articles");
 
-                    //
+                    // Save the Json data into a hash map
                     for (int i = 0; i < jsonArray.length(); i++) {
                         JSONObject jsonObject = jsonArray.getJSONObject(i);
                         HashMap<String, String> map = new HashMap<>();
@@ -121,18 +125,19 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Unexpected error", Toast.LENGTH_SHORT).show();
                 }
 
+                // Populate the Article preview view
                 ArticlePreview adapter = new ArticlePreview(MainActivity.this, dataList);
                 listNews.setAdapter(adapter);
 
+                // Listener for Article clicks
                 listNews.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     public void onItemClick(AdapterView<?> parent, View view,
                                             int position, long id) {
                         Intent i = new Intent(MainActivity.this, DisplayFullArticle.class);
-                        i.putExtra("url", dataList.get(+position).get(KEY_URL));
+                        i.putExtra("url", dataList.get(+position).get(KEY_URL)); // Pass the Full article URL
                         startActivity(i);
                     }
                 });
-
             } else {
                 Toast.makeText(getApplicationContext(), "Unable to find any articles!", Toast.LENGTH_SHORT).show();
             }

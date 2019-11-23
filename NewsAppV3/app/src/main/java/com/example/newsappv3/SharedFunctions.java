@@ -10,6 +10,7 @@ import java.net.URL;
 
 public class SharedFunctions {
 
+    // Check in network is available
     public static boolean isNetworkAvailable(Context context) {
         return ((ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE)).getActiveNetworkInfo() != null;
     }
@@ -19,6 +20,7 @@ public class SharedFunctions {
         URL url;
         HttpURLConnection connection = null;
         try {
+            // Make the http connection
             url = new URL(targetURL);
             connection = (HttpURLConnection) url.openConnection();
             connection.setRequestProperty("content-type", "application/json;  charset=utf-8");

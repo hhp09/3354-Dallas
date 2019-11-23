@@ -23,6 +23,8 @@ public class DisplayFullArticle extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_full_article);
 
+        setTitle("");
+
         Intent intent = getIntent();
         url = intent.getStringExtra("url");
         loader = findViewById(R.id.loader);
@@ -52,6 +54,7 @@ public class DisplayFullArticle extends AppCompatActivity {
             }
         });
 
+        // Load the full article
         webView.loadUrl(url);
 
     }
