@@ -17,7 +17,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import java.util.HashMap;
 
-
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends NewsDriver {
@@ -61,7 +60,7 @@ public class MainActivity extends NewsDriver {
         });
 
         // Check if network is available
-        if (SharedFunctions.isNetworkAvailable(getApplicationContext())) {
+        if (SharedResources.isNetworkAvailable(getApplicationContext())) {
             // If the network is available download the news
             DownloadNews newsTask = new DownloadNews();
             newsTask.execute();
@@ -76,7 +75,7 @@ public class MainActivity extends NewsDriver {
 
         // Perform a Get on the Given URL
         protected String doInBackground(String... args) {
-            String xml = SharedFunctions.excuteGet("https://newsapi.org/v2/top-headlines?country=us&apiKey=" + API_KEY);
+            String xml = SharedResources.excuteGet("https://newsapi.org/v2/top-headlines?country=us&apiKey=" + API_KEY);
             return xml;
         }
 
@@ -95,12 +94,13 @@ public class MainActivity extends NewsDriver {
                     for (int i = 0; i < jsonArray.length(); i++) {
                         JSONObject jsonObject = jsonArray.getJSONObject(i);
                         HashMap<String, String> map = new HashMap<>();
-                        map.put(KEY_AUTHOR, jsonObject.optString(KEY_AUTHOR));
+                        JSONObject source = jsonObject.getJSONObject(KEY_SOURCE);
+                        map.put(KEY_NAME, source.getString(KEY_NAME));
                         map.put(KEY_TITLE, jsonObject.optString(KEY_TITLE));
                         map.put(KEY_DESCRIPTION, jsonObject.optString(KEY_DESCRIPTION));
                         map.put(KEY_URL, jsonObject.optString(KEY_URL));
                         map.put(KEY_URLTOIMAGE, jsonObject.optString(KEY_URLTOIMAGE));
-                        map.put(KEY_PUBLISHEDAT, SharedFunctions.DateFormat(jsonObject.optString(KEY_PUBLISHEDAT)));
+                        map.put(KEY_PUBLISHEDAT, SharedResources.DateFormat(jsonObject.optString(KEY_PUBLISHEDAT)));
                         dataList.add(map);
                     }
                 } catch (JSONException e) {
@@ -108,7 +108,7 @@ public class MainActivity extends NewsDriver {
                 }
 
                 // Populate the Article preview view
-                ArticlePreview adapter = new ArticlePreview(MainActivity.this, dataList);
+                SharedResources.ArticlePreview adapter = new SharedResources.ArticlePreview(MainActivity.this, dataList);
                 listNews.setAdapter(adapter);
 
                 // Listener for Article clicks

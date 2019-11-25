@@ -18,13 +18,13 @@ public abstract class NewsDriver extends AppCompatActivity {
 
     // Storing each article in a HashMap as a key,value pair, and the list of articles stored in ArrayList
     ArrayList<HashMap<String, String>> dataList = new ArrayList<>();
-    static final String KEY_AUTHOR = "author";
     static final String KEY_TITLE = "title";
     static final String KEY_DESCRIPTION = "description";
     static final String KEY_URL = "url";
     static final String KEY_URLTOIMAGE = "urlToImage";
+    static final String KEY_SOURCE = "source";
+    static final String KEY_NAME = "name";
     static final String KEY_PUBLISHEDAT = "publishedAt";
-
 
     abstract class DownloadNews extends AsyncTask<String, Void, String> {
 
