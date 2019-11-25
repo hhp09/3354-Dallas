@@ -1,31 +1,18 @@
 package com.example.newsappv3;
 
-import android.content.Intent;
+// Abstract class used by any class intending to make a call to the News API
+
 import android.os.AsyncTask;
-import android.os.Bundle;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
-import android.widget.Toast;
-
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 
 public abstract class NewsDriver extends AppCompatActivity {
 
-
     String API_KEY = "47da75493074479c95323798e6a853ea"; // secret key
+    String keyWord;
     ListView listNews;
     ProgressBar loader;
 
@@ -38,8 +25,6 @@ public abstract class NewsDriver extends AppCompatActivity {
     static final String KEY_URLTOIMAGE = "urlToImage";
     static final String KEY_PUBLISHEDAT = "publishedAt";
 
-
-    protected abstract void onCreate();
 
     abstract class DownloadNews extends AsyncTask<String, Void, String> {
 

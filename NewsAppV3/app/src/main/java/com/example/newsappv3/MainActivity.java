@@ -5,40 +5,22 @@ package com.example.newsappv3;
 // Each key stores JSON value
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.os.AsyncTask;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ListView;
-import android.widget.ProgressBar;
 import android.widget.Toast;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import java.util.ArrayList;
 import java.util.HashMap;
 
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class MainActivity extends AppCompatActivity {
-
-
-    String API_KEY = "47da75493074479c95323798e6a853ea"; // secret key
-    ListView listNews;
-    ProgressBar loader;
-
-    // Storing each article in a HashMap as a key,value pair, and the list of articles stored in ArrayList
-    ArrayList<HashMap<String, String>> dataList = new ArrayList<>();
-    static final String KEY_AUTHOR = "author";
-    static final String KEY_TITLE = "title";
-    static final String KEY_DESCRIPTION = "description";
-    static final String KEY_URL = "url";
-    static final String KEY_URLTOIMAGE = "urlToImage";
-    static final String KEY_PUBLISHEDAT = "publishedAt";
+public class MainActivity extends NewsDriver {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

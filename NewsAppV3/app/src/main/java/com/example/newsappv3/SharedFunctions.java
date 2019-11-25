@@ -14,7 +14,6 @@ import java.util.Locale;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import org.ocpsoft.prettytime.PrettyTime;
 
 
 public class SharedFunctions {

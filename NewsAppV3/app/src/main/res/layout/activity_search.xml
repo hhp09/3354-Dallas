@@ -23,25 +23,6 @@
         android:text="Submit"
         android:textSize="20sp" />
 
-    <ListView
-        android:id="@+id/listNews"
-        android:layout_width="match_parent"
-        android:layout_height="550dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="118dp"
-        android:layout_marginEnd="-15dp"
-        android:background="#FFFFFF"
-        android:divider="#F5F5F5"
-        android:dividerHeight="1dp"
-        android:visibility="visible" />
-
-    <ProgressBar
-        android:id="@+id/loader"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"/>
-
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
