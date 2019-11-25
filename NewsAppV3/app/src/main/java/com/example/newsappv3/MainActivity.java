@@ -109,6 +109,7 @@ public class MainActivity extends AppCompatActivity {
                     JSONArray jsonArray = jsonResponse.optJSONArray("articles");
 
                     // Save the Json data into a hash map
+                    // Uses .optString to get data from the Json based on a specified key
                     for (int i = 0; i < jsonArray.length(); i++) {
                         JSONObject jsonObject = jsonArray.getJSONObject(i);
                         HashMap<String, String> map = new HashMap<>();
@@ -117,7 +118,7 @@ public class MainActivity extends AppCompatActivity {
                         map.put(KEY_DESCRIPTION, jsonObject.optString(KEY_DESCRIPTION));
                         map.put(KEY_URL, jsonObject.optString(KEY_URL));
                         map.put(KEY_URLTOIMAGE, jsonObject.optString(KEY_URLTOIMAGE));
-                        map.put(KEY_PUBLISHEDAT, jsonObject.optString(KEY_PUBLISHEDAT));
+                        map.put(KEY_PUBLISHEDAT, SharedFunctions.DateFormat(jsonObject.optString(KEY_PUBLISHEDAT)));
                         dataList.add(map);
                     }
                 } catch (JSONException e) {

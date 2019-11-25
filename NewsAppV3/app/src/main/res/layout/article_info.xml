@@ -56,7 +56,7 @@
             android:minLines="2"
             android:scrollHorizontally="true"
             android:ellipsize="end"
-            android:text="This is news description bla bla bla..."/>
+            android:text="This is news description."/>
 
 
 

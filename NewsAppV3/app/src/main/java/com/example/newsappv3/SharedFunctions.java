@@ -1,5 +1,8 @@
 package com.example.newsappv3;
 
+// Contains functions that are common in both the Main page and Search Page
+// Methods to check for network connection and perform a GET on a given url
+
 import android.content.Context;
 import android.net.ConnectivityManager;
 import java.io.BufferedReader;
@@ -7,6 +10,12 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.Locale;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import org.ocpsoft.prettytime.PrettyTime;
+
 
 public class SharedFunctions {
 
@@ -56,6 +65,27 @@ public class SharedFunctions {
                 connection.disconnect();
             }
         }
+    }
+
+    // Reformat a given date
+    public static String DateFormat(String oldstringDate){
+        String newDate;
+        SimpleDateFormat dateFormat = new SimpleDateFormat("E, d MMM yyyy", new Locale(getCountry()));
+        try {
+            Date date = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'").parse(oldstringDate);
+            newDate = dateFormat.format(date);
+        } catch (ParseException e) {
+            e.printStackTrace();
+            newDate = oldstringDate;
+        }
+
+        return newDate;
+    }
+
+    public static String getCountry(){
+        Locale locale = Locale.getDefault();
+        String country = String.valueOf(locale.getCountry());
+        return country.toLowerCase();
     }
 }
 
