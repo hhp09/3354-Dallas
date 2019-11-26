@@ -14,3 +14,14 @@ How to Build the Software
 4. Click on 'Run app'
 
 How to Use the Software
+
+  Searching Functionality
+  1. Click on the search tab on the bottom navigation bar
+  2. Enter a keyword or phrase into the Search bar
+  3. Click on the Submit Button
+      * Article previews containing the entered keyword will appear
+      * The article preview shows the article title, source, date published and a brief snippet of the article.
+      * Click on the phones built in back button to go from the article previews to the seach bar
+  5. Click on any of the previews to see the full article in a web view
+      * Click on the phones built in back button to go from the full article to the article previews
+  
