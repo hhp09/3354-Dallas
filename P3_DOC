@@ -1,0 +1,16 @@
+i. Template design pattern was used. NewsDriver is the abstract class with all the methods needed in order to make a proper call to the 
+News API. It is extended by both MainActivity and SearchArticlePreview.
+
+ii.
+
+
+ii. 
+
+How to Build the Software
+
+1. Open Android Studio
+2. Open NewsAppV3 android studio project in android studio
+3. Click on 'Make Project'
+4. Click on 'Run app'
+
+How to Use the Software
