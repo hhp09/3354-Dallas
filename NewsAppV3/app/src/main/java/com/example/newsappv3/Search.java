@@ -8,10 +8,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -37,13 +35,11 @@ public class Search extends AppCompatActivity {
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                submitButton.onEditorAction(EditorInfo.IME_ACTION_DONE);
                 Intent i = new Intent(Search.this , SearchArticlePreview.class);
                 str = et.getText().toString();
                 // Validate for empty user input
                 if (TextUtils.isEmpty(str.trim())) {
                     Toast toast= Toast. makeText(getApplicationContext(),"Invalid Input",Toast. LENGTH_SHORT);
-                    toast.setGravity(Gravity.CENTER, 0, 0);
                     toast.show();
                 }
                 else

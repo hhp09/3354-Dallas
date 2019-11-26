@@ -56,7 +56,7 @@
             android:minLines="2"
             android:scrollHorizontally="true"
             android:ellipsize="end"
-            android:text="This is news description."/>
+            android:text="This is news description bla bla bla..."/>
 
 
 
@@ -75,12 +75,12 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/name"
+                    android:id="@+id/author"
                     android:textSize="15sp"
                     android:textColor="#42A5F5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Name of source"/>
+                    android:text="News Author"/>
 
             </LinearLayout>
 
