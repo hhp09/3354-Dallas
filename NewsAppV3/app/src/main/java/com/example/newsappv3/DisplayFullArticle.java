@@ -54,7 +54,7 @@ public class DisplayFullArticle extends AppCompatActivity {
             }
         });
 
-        // Load the full article
+        // Load the full article in the web view
         webView.loadUrl(url);
 
     }

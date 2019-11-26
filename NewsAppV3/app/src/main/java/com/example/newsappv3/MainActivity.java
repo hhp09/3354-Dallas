@@ -32,13 +32,13 @@ public class MainActivity extends NewsDriver {
         listNews.setEmptyView(loader);
 
 
-        //Initialize and assign variable
+        //set up the bottom nav bar
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 
-        //Set Home to selected
+        //Set Home as the selected item
         bottomNavigationView.setSelectedItemId(R.id.home);
 
-        //Perform ItemSelectedListener
+        //Listen for bottom nav bar activity
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
@@ -69,6 +69,7 @@ public class MainActivity extends NewsDriver {
         }
     }
 
+    // Get the top headlines and fill in the article previews
     class DownloadNews extends AsyncTask<String, Void, String> {
         @Override
         protected void onPreExecute() { super.onPreExecute(); }
@@ -79,6 +80,7 @@ public class MainActivity extends NewsDriver {
             return xml;
         }
 
+        // Parse the data from the json and populate the article preview layout
         @Override
         protected void onPostExecute(String xml) {
 

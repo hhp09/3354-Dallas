@@ -54,13 +54,13 @@ public class Search extends AppCompatActivity {
             }
         });
 
-        //Initialize and assign variable
+        // Set the bottom navigation bar view
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 
-        //Set Search to selected
+        //Set Search to be the selected activity
         bottomNavigationView.setSelectedItemId(R.id.search);
 
-        //Perform ItemSelectedListener
+        //Listen for bottom nav bar Activity
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {

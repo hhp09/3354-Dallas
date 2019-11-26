@@ -16,7 +16,7 @@ public abstract class NewsDriver extends AppCompatActivity {
     ListView listNews;
     ProgressBar loader;
 
-    // Storing each article in a HashMap as a key,value pair, and the list of articles stored in ArrayList
+    // Strings used to parse data from a json file.
     ArrayList<HashMap<String, String>> dataList = new ArrayList<>();
     static final String KEY_TITLE = "title";
     static final String KEY_DESCRIPTION = "description";
@@ -26,6 +26,7 @@ public abstract class NewsDriver extends AppCompatActivity {
     static final String KEY_NAME = "name";
     static final String KEY_PUBLISHEDAT = "publishedAt";
 
+    // Methods needed to properly call the News API and save the data correctly.
     abstract class DownloadNews extends AsyncTask<String, Void, String> {
 
         @Override

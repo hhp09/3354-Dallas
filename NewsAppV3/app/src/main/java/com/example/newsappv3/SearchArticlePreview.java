@@ -29,6 +29,7 @@ public class SearchArticlePreview extends NewsDriver {
 
         setTitle("");
 
+        // Get the keyword entered by the user
         keyWord = getIntent().getExtras().getString("keyWord");
         listNews = findViewById(R.id.listNews);
         loader = findViewById(R.id.loader);
@@ -42,13 +43,13 @@ public class SearchArticlePreview extends NewsDriver {
             Toast.makeText(getApplicationContext(), "No Internet Connection", Toast.LENGTH_LONG).show();
         }
 
-        //Initialize and assign variable
+        // Set the bottom nav bar view
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 
-        //Set Search to selected
+        //Set Search as the selected activity
         bottomNavigationView.setSelectedItemId(R.id.search);
 
-        //Perform ItemSelectedListener
+        // Listen for bottom navigation usage
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
@@ -70,6 +71,7 @@ public class SearchArticlePreview extends NewsDriver {
         });
     }
 
+    // Download the news articles
     class DownloadNews extends AsyncTask<String, Void, String> {
 
         // Perform a Get on the Given URL
@@ -78,6 +80,8 @@ public class SearchArticlePreview extends NewsDriver {
             return xml;
         }
 
+        // Parse the Json data and save the json data into a HashMap
+        // Use the Hash map to fill in the article preview layout
         @Override
         protected void onPostExecute(String xml) {
 
@@ -109,9 +113,10 @@ public class SearchArticlePreview extends NewsDriver {
                 SharedResources.ArticlePreview adapter = new SharedResources.ArticlePreview(SearchArticlePreview.this, dataList);
                 listNews.setAdapter(adapter);
 
-                // Listener for Article clicks
+                // Listener for Article clicks.
                 listNews.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                        // Show the full article that user selects
                         Intent i = new Intent(SearchArticlePreview.this, DisplayFullArticle.class);
                         i.putExtra("url", dataList.get(+position).get(KEY_URL));
                         startActivity(i);

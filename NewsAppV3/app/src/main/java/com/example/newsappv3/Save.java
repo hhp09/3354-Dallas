@@ -18,13 +18,13 @@ public class Save extends AppCompatActivity {
 
         setTitle("Save");
 
-        //Initialize and assign variable
+        //set up the bottom nav bar
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 
-        //Set saved to selected
+        //Set saved to be the selected item
         bottomNavigationView.setSelectedItemId(R.id.saved);
 
-        //Perform ItemSelectedListener
+        //Listen for bottom navigation activity
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {

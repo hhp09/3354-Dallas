@@ -77,7 +77,7 @@ public class SharedResources {
         }
     }
 
-    // Reformat a given date
+    // Reformat a given article date to remove time
     public static String DateFormat(String oldstringDate){
         String newDate;
         SimpleDateFormat dateFormat = new SimpleDateFormat("E, d MMM yyyy", new Locale(getCountry()));
@@ -92,6 +92,7 @@ public class SharedResources {
         return newDate;
     }
 
+    // Method used to reformat article date
     public static String getCountry(){
         Locale locale = Locale.getDefault();
         String country = String.valueOf(locale.getCountry());
