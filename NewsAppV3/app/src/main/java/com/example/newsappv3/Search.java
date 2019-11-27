@@ -39,17 +39,18 @@ public class Search extends AppCompatActivity {
             public void onClick(View v) {
                 submitButton.onEditorAction(EditorInfo.IME_ACTION_DONE);
                 Intent i = new Intent(Search.this , SearchArticlePreview.class);
-                str = et.getText().toString();
-                // Validate for empty user input
-                if (TextUtils.isEmpty(str.trim())) {
-                    Toast toast= Toast. makeText(getApplicationContext(),"Invalid Input",Toast. LENGTH_SHORT);
-                    toast.setGravity(Gravity.CENTER, 0, 0);
-                    toast.show();
-                }
-                else
-                {
+                str = et.getText().toString().trim();
+
+                // Validate the user input
+                if ( isValidInput(et.getText().toString()) ) {
+                    str = et.getText().toString().trim();
                     i.putExtra("keyWord" , str);
                     startActivity(i);
+                }
+                else {
+                    Toast errorMsg= Toast.makeText(getApplicationContext(),"Invalid Input",Toast. LENGTH_SHORT);
+                    errorMsg.setGravity(Gravity.CENTER, 0, 0);
+                    errorMsg.show();
                 }
             }
         });
@@ -80,5 +81,15 @@ public class Search extends AppCompatActivity {
                 return false;
             }
         });
+    }
+
+    public boolean isValidInput(String str)
+    {
+        boolean result = true;
+        if(str.trim().isEmpty())
+        {
+            result = false;
+        }
+        return result;
     }
 }
