@@ -8,6 +8,7 @@ import androidx.annotation.NonNull;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -60,6 +61,8 @@ public class SearchArticlePreview extends NewsDriver {
                         overridePendingTransition(0, 0);
                         return true;
                     case R.id.search:
+                        startActivity(new Intent(getApplicationContext(), Search.class));
+                        overridePendingTransition(0, 0);
                         return true;
                     case R.id.saved:
                         startActivity(new Intent(getApplicationContext(), Save.class));
@@ -124,7 +127,11 @@ public class SearchArticlePreview extends NewsDriver {
                 });
 
             } else {
-                Toast.makeText(getApplicationContext(), "No news found", Toast.LENGTH_SHORT).show();
+                Toast errorMsg = Toast.makeText(getApplicationContext(), "No news found", Toast.LENGTH_SHORT);
+                errorMsg.setGravity(Gravity.CENTER, 0, 0);
+                errorMsg.show();
+                startActivity(new Intent(getApplicationContext(), Search.class));
+                overridePendingTransition(0, 0);
             }
         }
     }
