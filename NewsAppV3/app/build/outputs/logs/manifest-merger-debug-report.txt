@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/youppo/Documents/3354-Dallas/NewsAppV3/app/src/main/AndroidManifest.xml:2:1-29:12
-INJECTED from /home/youppo/Documents/3354-Dallas/NewsAppV3/app/src/main/AndroidManifest.xml:2:1-29:12
-INJECTED from /home/youppo/Documents/3354-Dallas/NewsAppV3/app/src/main/AndroidManifest.xml:2:1-29:12
-INJECTED from /home/youppo/Documents/3354-Dallas/NewsAppV3/app/src/main/AndroidManifest.xml:2:1-29:12
+ADDED from /home/youppo/Documents/3354-Dallas/NewsAppV3/app/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /home/youppo/Documents/3354-Dallas/NewsAppV3/app/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /home/youppo/Documents/3354-Dallas/NewsAppV3/app/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /home/youppo/Documents/3354-Dallas/NewsAppV3/app/src/main/AndroidManifest.xml:2:1-31:12
 MERGED from [com.google.android.material:material:1.0.0] /home/youppo/.gradle/caches/transforms-2/files-2.1/2946ca0ea6c89dab7d7d9fbc18e54292/material-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat:1.1.0] /home/youppo/.gradle/caches/transforms-2/files-2.1/d74b5b498b35fd5cb32d0a6997bb1d3d/appcompat-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /home/youppo/.gradle/caches/transforms-2/files-2.1/508ac768b50158a079142e4dc4915061/constraintlayout-1.1.3/AndroidManifest.xml:2:1-11:12
@@ -43,20 +43,20 @@ MERGED from [androidx.print:print:1.0.0] /home/youppo/.gradle/caches/transforms-
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] /home/youppo/.gradle/caches/transforms-2/files-2.1/34fb4b53ebbbc0d42cf00f739d5b7918/lifecycle-runtime-2.1.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /home/youppo/.gradle/caches/transforms-2/files-2.1/534dfe358287b68b5ba1038d10b7afc0/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.savedstate:savedstate:1.0.0] /home/youppo/.gradle/caches/transforms-2/files-2.1/69ba81d17fd1c26c75281615add0554c/savedstate-1.0.0/AndroidManifest.xml:17:1-24:12
-INJECTED from /home/youppo/Documents/3354-Dallas/NewsAppV3/app/src/main/AndroidManifest.xml:2:1-29:12
-INJECTED from /home/youppo/Documents/3354-Dallas/NewsAppV3/app/src/main/AndroidManifest.xml:2:1-29:12
-INJECTED from /home/youppo/Documents/3354-Dallas/NewsAppV3/app/src/main/AndroidManifest.xml:2:1-29:12
+INJECTED from /home/youppo/Documents/3354-Dallas/NewsAppV3/app/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /home/youppo/Documents/3354-Dallas/NewsAppV3/app/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /home/youppo/Documents/3354-Dallas/NewsAppV3/app/src/main/AndroidManifest.xml:2:1-31:12
 	package
 		ADDED from /home/youppo/Documents/3354-Dallas/NewsAppV3/app/src/main/AndroidManifest.xml:3:5-36
 		INJECTED from /home/youppo/Documents/3354-Dallas/NewsAppV3/app/src/main/AndroidManifest.xml
 		INJECTED from /home/youppo/Documents/3354-Dallas/NewsAppV3/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /home/youppo/Documents/3354-Dallas/NewsAppV3/app/src/main/AndroidManifest.xml
-		ADDED from /home/youppo/Documents/3354-Dallas/NewsAppV3/app/src/main/AndroidManifest.xml:2:1-29:12
+		ADDED from /home/youppo/Documents/3354-Dallas/NewsAppV3/app/src/main/AndroidManifest.xml:2:1-31:12
 		INJECTED from /home/youppo/Documents/3354-Dallas/NewsAppV3/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /home/youppo/Documents/3354-Dallas/NewsAppV3/app/src/main/AndroidManifest.xml
-		ADDED from /home/youppo/Documents/3354-Dallas/NewsAppV3/app/src/main/AndroidManifest.xml:2:1-29:12
+		ADDED from /home/youppo/Documents/3354-Dallas/NewsAppV3/app/src/main/AndroidManifest.xml:2:1-31:12
 		INJECTED from /home/youppo/Documents/3354-Dallas/NewsAppV3/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /home/youppo/Documents/3354-Dallas/NewsAppV3/app/src/main/AndroidManifest.xml:2:11-69
@@ -69,7 +69,7 @@ ADDED from /home/youppo/Documents/3354-Dallas/NewsAppV3/app/src/main/AndroidMani
 	android:name
 		ADDED from /home/youppo/Documents/3354-Dallas/NewsAppV3/app/src/main/AndroidManifest.xml:6:22-76
 application
-ADDED from /home/youppo/Documents/3354-Dallas/NewsAppV3/app/src/main/AndroidManifest.xml:8:5-27:19
+ADDED from /home/youppo/Documents/3354-Dallas/NewsAppV3/app/src/main/AndroidManifest.xml:8:5-29:19
 MERGED from [com.google.android.material:material:1.0.0] /home/youppo/.gradle/caches/transforms-2/files-2.1/2946ca0ea6c89dab7d7d9fbc18e54292/material-1.0.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.0.0] /home/youppo/.gradle/caches/transforms-2/files-2.1/2946ca0ea6c89dab7d7d9fbc18e54292/material-1.0.0/AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /home/youppo/.gradle/caches/transforms-2/files-2.1/508ac768b50158a079142e4dc4915061/constraintlayout-1.1.3/AndroidManifest.xml:9:5-20
@@ -101,31 +101,33 @@ ADDED from /home/youppo/Documents/3354-Dallas/NewsAppV3/app/src/main/AndroidMani
 	android:name
 		ADDED from /home/youppo/Documents/3354-Dallas/NewsAppV3/app/src/main/AndroidManifest.xml:16:19-55
 activity#com.example.newsappv3.DisplayFullArticle
-ADDED from /home/youppo/Documents/3354-Dallas/NewsAppV3/app/src/main/AndroidManifest.xml:17:9-56
+ADDED from /home/youppo/Documents/3354-Dallas/NewsAppV3/app/src/main/AndroidManifest.xml:17:9-19:15
+	android:parentActivityName
+		ADDED from /home/youppo/Documents/3354-Dallas/NewsAppV3/app/src/main/AndroidManifest.xml:18:19-82
 	android:name
 		ADDED from /home/youppo/Documents/3354-Dallas/NewsAppV3/app/src/main/AndroidManifest.xml:17:19-53
 activity#com.example.newsappv3.Save
-ADDED from /home/youppo/Documents/3354-Dallas/NewsAppV3/app/src/main/AndroidManifest.xml:18:9-42
+ADDED from /home/youppo/Documents/3354-Dallas/NewsAppV3/app/src/main/AndroidManifest.xml:20:9-42
 	android:name
-		ADDED from /home/youppo/Documents/3354-Dallas/NewsAppV3/app/src/main/AndroidManifest.xml:18:19-39
+		ADDED from /home/youppo/Documents/3354-Dallas/NewsAppV3/app/src/main/AndroidManifest.xml:20:19-39
 activity#com.example.newsappv3.Search
-ADDED from /home/youppo/Documents/3354-Dallas/NewsAppV3/app/src/main/AndroidManifest.xml:19:9-44
+ADDED from /home/youppo/Documents/3354-Dallas/NewsAppV3/app/src/main/AndroidManifest.xml:21:9-44
 	android:name
-		ADDED from /home/youppo/Documents/3354-Dallas/NewsAppV3/app/src/main/AndroidManifest.xml:19:19-41
+		ADDED from /home/youppo/Documents/3354-Dallas/NewsAppV3/app/src/main/AndroidManifest.xml:21:19-41
 activity#com.example.newsappv3.MainActivity
-ADDED from /home/youppo/Documents/3354-Dallas/NewsAppV3/app/src/main/AndroidManifest.xml:20:9-26:20
+ADDED from /home/youppo/Documents/3354-Dallas/NewsAppV3/app/src/main/AndroidManifest.xml:22:9-28:20
 	android:name
-		ADDED from /home/youppo/Documents/3354-Dallas/NewsAppV3/app/src/main/AndroidManifest.xml:20:19-47
+		ADDED from /home/youppo/Documents/3354-Dallas/NewsAppV3/app/src/main/AndroidManifest.xml:22:19-47
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /home/youppo/Documents/3354-Dallas/NewsAppV3/app/src/main/AndroidManifest.xml:21:13-25:29
+ADDED from /home/youppo/Documents/3354-Dallas/NewsAppV3/app/src/main/AndroidManifest.xml:23:13-27:29
 action#android.intent.action.MAIN
-ADDED from /home/youppo/Documents/3354-Dallas/NewsAppV3/app/src/main/AndroidManifest.xml:22:17-69
+ADDED from /home/youppo/Documents/3354-Dallas/NewsAppV3/app/src/main/AndroidManifest.xml:24:17-69
 	android:name
-		ADDED from /home/youppo/Documents/3354-Dallas/NewsAppV3/app/src/main/AndroidManifest.xml:22:25-66
+		ADDED from /home/youppo/Documents/3354-Dallas/NewsAppV3/app/src/main/AndroidManifest.xml:24:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/youppo/Documents/3354-Dallas/NewsAppV3/app/src/main/AndroidManifest.xml:24:17-77
+ADDED from /home/youppo/Documents/3354-Dallas/NewsAppV3/app/src/main/AndroidManifest.xml:26:17-77
 	android:name
-		ADDED from /home/youppo/Documents/3354-Dallas/NewsAppV3/app/src/main/AndroidManifest.xml:24:27-74
+		ADDED from /home/youppo/Documents/3354-Dallas/NewsAppV3/app/src/main/AndroidManifest.xml:26:27-74
 uses-sdk
 INJECTED from /home/youppo/Documents/3354-Dallas/NewsAppV3/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/youppo/Documents/3354-Dallas/NewsAppV3/app/src/main/AndroidManifest.xml

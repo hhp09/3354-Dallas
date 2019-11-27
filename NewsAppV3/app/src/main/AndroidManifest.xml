@@ -14,7 +14,9 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         >
         <activity android:name=".SearchArticlePreview"></activity>
-        <activity android:name=".DisplayFullArticle" />
+        <activity android:name=".DisplayFullArticle"
+                  android:parentActivityName="com.example.newsappv3.MainActivity"
+            />
         <activity android:name=".Save" />
         <activity android:name=".Search" />
         <activity android:name=".MainActivity">
