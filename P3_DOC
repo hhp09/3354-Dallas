@@ -3,6 +3,8 @@ News API. It is extended by both MainActivity and SearchArticlePreview.
 
 ii.
 
+Location of test class for isValidInput method: NewsAppV3/app/src/test/java/com/example/newsappv3/SearchTest.java
+
 
 ii. 
 
