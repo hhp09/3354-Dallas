@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -65,9 +66,40 @@ public class DisplayFullArticle extends AppCompatActivity {
     }
     //method to show menu of options
     public void showMenu(View v) {
-        PopupMenu optionMenu = new PopupMenu(this, v);
+        final PopupMenu optionMenu = new PopupMenu(this, v);
+        optionMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                switch (item.getItemId())
+                {
+                    case R.id.option_share:
+                        shareUrl();
+                        return true;
+                    case R.id.option_save:
+                        startActivity(new Intent(getApplicationContext(), Search.class));
+                        overridePendingTransition(0, 0);
+                        return true;
+                }
+                return false;
+            }
+        });
         optionMenu.inflate(R.menu.menu_options);
         optionMenu.show();
+
+
+
+
+    }
+    //opens up the share menu to share url
+    public void shareUrl(){
+        Intent sendIntent = new Intent();
+        sendIntent.setAction(Intent.ACTION_SEND);
+        sendIntent.putExtra(Intent.EXTRA_TEXT, url);
+        sendIntent.setType("text/plain");
+
+        Intent shareIntent = Intent.createChooser(sendIntent, null);
+        startActivity(shareIntent);
+
     }
 
 }

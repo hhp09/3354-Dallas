@@ -32,6 +32,7 @@ public class MainActivity extends NewsDriver {
         listNews.setEmptyView(loader);
 
 
+
         //Initialize and assign variable
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 
