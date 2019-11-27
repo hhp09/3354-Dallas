@@ -14,6 +14,7 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         >
         <activity android:name=".SearchArticlePreview"></activity>
+        <!-- this is declared as a child activity so that the user may return to main activity using the up action -->
         <activity android:name=".DisplayFullArticle"
                   android:parentActivityName="com.example.newsappv3.MainActivity"
             />
