@@ -1,12 +1,15 @@
 package com.example.newsappv3;
 
-// DisplayFullActivity will display the full article page in WebView.
+// DisplayFullActivity will display the full article page in WebView. As well as set up a toolbar with an options menu allowing users to share and save the article
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.PopupMenu;
+import androidx.appcompat.widget.Toolbar;
 
 import android.os.Bundle;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuInflater;
 import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -22,6 +25,8 @@ public class DisplayFullArticle extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_full_article);
+        Toolbar myToolbar = findViewById(R.id.my_toolbar);
+        setSupportActionBar(myToolbar);
 
         setTitle("");
 
@@ -58,4 +63,11 @@ public class DisplayFullArticle extends AppCompatActivity {
         webView.loadUrl(url);
 
     }
+    //method to show menu of options
+    public void showMenu(View v) {
+        PopupMenu optionMenu = new PopupMenu(this, v);
+        optionMenu.inflate(R.menu.menu_options);
+        optionMenu.show();
+    }
+
 }
