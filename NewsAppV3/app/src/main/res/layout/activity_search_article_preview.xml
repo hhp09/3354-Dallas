@@ -10,7 +10,7 @@
     <ListView
         android:id="@+id/listNews"
         android:layout_width="match_parent"
-        android:layout_height="550dp"
+        android:layout_height="602dp"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="0dp"
         android:background="#FFFFFF"
