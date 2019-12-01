@@ -22,6 +22,9 @@ public class DisplayFullArticle extends AppCompatActivity {
     WebView webView;
     ProgressBar loader;
     String url = "";
+    String author ="";//todo this
+    String content="";
+    String description="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -84,6 +87,7 @@ public class DisplayFullArticle extends AppCompatActivity {
                         return true;
                     //When save is tapped call share method
                     case R.id.option_save:
+                        saveArticle();
                         return true;
                 }
                 return false;
@@ -110,6 +114,13 @@ public class DisplayFullArticle extends AppCompatActivity {
         Intent shareIntent = Intent.createChooser(sendIntent, null);
         startActivity(shareIntent);
 
+    }
+
+    public void saveArticle(){
+        Article a= new Article();
+        a.setInfo(author,url,description,content);
+        a.saveToFile();
+        System.out.println("Saved");
     }
 
 }

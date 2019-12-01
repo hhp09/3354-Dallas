@@ -21,16 +21,6 @@ public class Article {
     final static String TAG = Article.class.getName();
 
 
-    //TODO this dont work idk why
-    //int result = ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.READ_EXTERNAL_STORAGE);
-    //int result1 = ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.WRITE_EXTERNAL_STORAGE);
-
-    //if (ContextCompat.checkSelfPermission(Article, Manifest.permission.WRITE_EXTERNAL_STORAGE)
-    //        != PackageManager.PERMISSION_GRANTED) {
-    //     //Permission is not granted
-    //}
-
-
     public void setInfo(String author, String url, String description, String content){
         this.author = author;
         this.url = url;
