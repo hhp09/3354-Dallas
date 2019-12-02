@@ -5,6 +5,8 @@ package com.example.newsappv3;
 // Each key stores JSON value
 
 import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -19,7 +21,8 @@ import java.util.HashMap;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class MainActivity extends NewsDriver {
+public class MainActivity extends NewsDriver
+{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -125,5 +128,12 @@ public class MainActivity extends NewsDriver {
                 Toast.makeText(getApplicationContext(), "Unable to find any articles!", Toast.LENGTH_SHORT).show();
             }
         }
+    }
+
+    public void onClick (View v)
+    {
+        Intent intent = getIntent();
+        finish();
+        startActivity(intent);
     }
 }
