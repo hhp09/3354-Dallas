@@ -34,7 +34,7 @@ public abstract class NewsDriver extends AppCompatActivity {
 
         abstract protected String doInBackground(String... args);
 
-        abstract protected void onPostExecute(String xml);
+        abstract protected void onPostExecute(String json);
 
     }
 }

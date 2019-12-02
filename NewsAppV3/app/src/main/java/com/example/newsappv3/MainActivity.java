@@ -76,19 +76,19 @@ public class MainActivity extends NewsDriver {
 
         // Perform a Get on the Given URL
         protected String doInBackground(String... args) {
-            String xml = SharedResources.excuteGet("https://newsapi.org/v2/top-headlines?country=us&apiKey=" + API_KEY);
-            return xml;
+            String json = SharedResources.excuteGet("https://newsapi.org/v2/top-headlines?country=us&apiKey=" + API_KEY);
+            return json;
         }
 
         // Parse the data from the json and populate the article preview layout
         @Override
-        protected void onPostExecute(String xml) {
+        protected void onPostExecute(String json) {
 
             // Check that articles were received
-            if (xml.length() > 0) {
+            if (json.length() > 0) {
 
                 try {
-                    JSONObject jsonResponse = new JSONObject(xml);
+                    JSONObject jsonResponse = new JSONObject(json);
                     JSONArray jsonArray = jsonResponse.optJSONArray("articles");
 
                     // Save the Json data into a hash map
@@ -115,8 +115,7 @@ public class MainActivity extends NewsDriver {
 
                 // Listener for Article clicks
                 listNews.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                    public void onItemClick(AdapterView<?> parent, View view,
-                                            int position, long id) {
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                         Intent i = new Intent(MainActivity.this, DisplayFullArticle.class);
                         i.putExtra("url", dataList.get(+position).get(KEY_URL)); // Pass the Full article URL
                         startActivity(i);

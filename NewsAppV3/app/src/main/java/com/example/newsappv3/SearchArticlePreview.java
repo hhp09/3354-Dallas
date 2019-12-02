@@ -79,22 +79,31 @@ public class SearchArticlePreview extends NewsDriver {
 
         // Perform a Get on the Given URL
         protected String doInBackground(String... args) {
-            String xml = SharedResources.excuteGet("https://newsapi.org/v2/everything?" + "q=" + keyWord + "&apiKey=" + API_KEY);
-            return xml;
+            String json = SharedResources.excuteGet("https://newsapi.org/v2/everything?" + "q=" + keyWord + "&sortBy=relevancy&apiKey=" + API_KEY);
+            return json;
         }
 
         // Parse the Json data and save the json data into a HashMap
         // Use the Hash map to fill in the article preview layout
         @Override
-        protected void onPostExecute(String xml) {
+        protected void onPostExecute(String json) {
 
-            // Check that articles were received
-            if (xml.length() > 0) {
+            // Check that Json was actually returned
+            if (json.length() > 0) {
 
                 try {
-                    JSONObject jsonResponse = new JSONObject(xml);
+                    JSONObject jsonResponse = new JSONObject(json);
                     JSONArray jsonArray = jsonResponse.optJSONArray("articles");
 
+                    // Check that the Json returned has articles
+                    if(jsonArray.length() == 0 )
+                    {
+                        Toast errorMsg = Toast.makeText(getApplicationContext(), "No news found", Toast.LENGTH_SHORT);
+                        errorMsg.setGravity(Gravity.CENTER, 0, 0);
+                        errorMsg.show();
+                        startActivity(new Intent(getApplicationContext(), Search.class));
+                        overridePendingTransition(0, 0);
+                    }
                     // Save the Json data into a hash map
                     for (int i = 0; i < jsonArray.length(); i++) {
                         JSONObject jsonObject = jsonArray.getJSONObject(i);
