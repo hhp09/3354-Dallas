@@ -37,6 +37,9 @@ dependencies {
     annotationProcessor "androidx.room:room-compiler:$room_version" // For Kotlin use kapt instead of annotationProcessor
     // Test helpers
     testImplementation "androidx.room:room-testing:$room_version"
-    implementation 'com.android.support:appcompat-v7:29.0.0'
+    implementation 'com.android.support:appcompat-v7:27.0.0'
+
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.android.support:design:29.0.0'
 
 }
