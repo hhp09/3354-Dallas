@@ -9,6 +9,7 @@ MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\Owner\.gradle\caches\t
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\Owner\.gradle\caches\transforms-2\files-2.1\508ac768b50158a079142e4dc4915061\constraintlayout-1.1.3\AndroidManifest.xml:2:1-11:12
 MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\Owner\.gradle\caches\transforms-2\files-2.1\192d0ce96bae761e80a7db8a0cc15b9c\jetified-picasso-2.71828\AndroidManifest.xml:2:1-14:12
 MERGED from [androidx.room:room-runtime:2.2.2] C:\Users\Owner\.gradle\caches\transforms-2\files-2.1\f808393bedcf6de40de959d0926e2d8a\room-runtime-2.2.2\AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Owner\.gradle\caches\transforms-2\files-2.1\f64c8351ef0c9a7a800019d28185706c\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\Owner\.gradle\caches\transforms-2\files-2.1\d934be3c652b5ff5c18e2d68c8236453\fragment-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\Owner\.gradle\caches\transforms-2\files-2.1\c63ceca946e9bc27525371878741042e\appcompat-resources-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.recyclerview:recyclerview:1.0.0] C:\Users\Owner\.gradle\caches\transforms-2\files-2.1\ca3ed72cfdc57fc3a102e462c0327875\recyclerview-1.0.0\AndroidManifest.xml:17:1-22:12
@@ -28,7 +29,6 @@ MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Owne
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Owner\.gradle\caches\transforms-2\files-2.1\4848834a580ecbbeaa84b2c68ac1663a\asynclayoutinflater-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.core:core:1.1.0] C:\Users\Owner\.gradle\caches\transforms-2\files-2.1\f01b27bb220ecb79298884ef36a7a2fb\core-1.1.0\AndroidManifest.xml:17:1-26:12
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Owner\.gradle\caches\transforms-2\files-2.1\01d333055a983e736e0a5fac950ffa8f\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Owner\.gradle\caches\transforms-2\files-2.1\f64c8351ef0c9a7a800019d28185706c\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\Owner\.gradle\caches\transforms-2\files-2.1\b72a7379f5aa5df036759e5e73c50cc5\exifinterface-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.sqlite:sqlite-framework:2.0.1] C:\Users\Owner\.gradle\caches\transforms-2\files-2.1\20781a3dce89497a6deabef99a207e2e\sqlite-framework-2.0.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.sqlite:sqlite:2.0.1] C:\Users\Owner\.gradle\caches\transforms-2\files-2.1\983b05c78ba513d7461dfe3d9d241f81\sqlite-2.0.1\AndroidManifest.xml:17:1-22:12
@@ -142,6 +142,8 @@ MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\Owner\.gradle\caches
 MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\Owner\.gradle\caches\transforms-2\files-2.1\192d0ce96bae761e80a7db8a0cc15b9c\jetified-picasso-2.71828\AndroidManifest.xml:5:5-44
 MERGED from [androidx.room:room-runtime:2.2.2] C:\Users\Owner\.gradle\caches\transforms-2\files-2.1\f808393bedcf6de40de959d0926e2d8a\room-runtime-2.2.2\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.room:room-runtime:2.2.2] C:\Users\Owner\.gradle\caches\transforms-2\files-2.1\f808393bedcf6de40de959d0926e2d8a\room-runtime-2.2.2\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Owner\.gradle\caches\transforms-2\files-2.1\f64c8351ef0c9a7a800019d28185706c\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Owner\.gradle\caches\transforms-2\files-2.1\f64c8351ef0c9a7a800019d28185706c\cardview-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\Owner\.gradle\caches\transforms-2\files-2.1\d934be3c652b5ff5c18e2d68c8236453\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\Owner\.gradle\caches\transforms-2\files-2.1\d934be3c652b5ff5c18e2d68c8236453\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\Owner\.gradle\caches\transforms-2\files-2.1\c63ceca946e9bc27525371878741042e\appcompat-resources-1.1.0\AndroidManifest.xml:20:5-22:41
@@ -180,8 +182,6 @@ MERGED from [androidx.core:core:1.1.0] C:\Users\Owner\.gradle\caches\transforms-
 MERGED from [androidx.core:core:1.1.0] C:\Users\Owner\.gradle\caches\transforms-2\files-2.1\f01b27bb220ecb79298884ef36a7a2fb\core-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Owner\.gradle\caches\transforms-2\files-2.1\01d333055a983e736e0a5fac950ffa8f\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Owner\.gradle\caches\transforms-2\files-2.1\01d333055a983e736e0a5fac950ffa8f\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Owner\.gradle\caches\transforms-2\files-2.1\f64c8351ef0c9a7a800019d28185706c\cardview-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Owner\.gradle\caches\transforms-2\files-2.1\f64c8351ef0c9a7a800019d28185706c\cardview-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\Owner\.gradle\caches\transforms-2\files-2.1\b72a7379f5aa5df036759e5e73c50cc5\exifinterface-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\Owner\.gradle\caches\transforms-2\files-2.1\b72a7379f5aa5df036759e5e73c50cc5\exifinterface-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.sqlite:sqlite-framework:2.0.1] C:\Users\Owner\.gradle\caches\transforms-2\files-2.1\20781a3dce89497a6deabef99a207e2e\sqlite-framework-2.0.1\AndroidManifest.xml:20:5-44
