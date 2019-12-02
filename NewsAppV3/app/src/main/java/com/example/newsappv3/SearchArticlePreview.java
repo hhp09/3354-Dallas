@@ -64,8 +64,8 @@ public class SearchArticlePreview extends NewsDriver {
                         startActivity(new Intent(getApplicationContext(), Search.class));
                         overridePendingTransition(0, 0);
                         return true;
-                    case R.id.saved:
-                        startActivity(new Intent(getApplicationContext(), Save.class));
+                    case R.id.weather:
+                        startActivity(new Intent(getApplicationContext(), Weather.class));
                         overridePendingTransition(0, 0);
                         return true;
                 }

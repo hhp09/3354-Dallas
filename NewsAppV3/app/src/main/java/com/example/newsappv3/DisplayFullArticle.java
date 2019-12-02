@@ -83,7 +83,7 @@ public class DisplayFullArticle extends AppCompatActivity {
                         shareUrl();
                         return true;
                     //When save is tapped call share method
-                    case R.id.option_save:
+                    case R.id.option_save://todo edit
                         return true;
                 }
                 return false;
