@@ -1,5 +1,6 @@
 i. Template design pattern was used. NewsDriver is the abstract class with all the methods needed in order to make a proper call to the 
 News API. It is extended by both MainActivity and SearchArticlePreview.
+The link to the news api used: https://newsapi.org/docs/endpoints/top-headlines
 
 ii.
 
