@@ -1,118 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:background="@android:color/transparent"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal"
+    android:layout_weight="7"
+    android:padding="8dp">
 
-        <RelativeLayout
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="4dp">
+
+        <ImageView
+            android:id="@+id/galleryImage"
+            android:transitionName="galleryImage"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:scaleType="centerCrop"
+            />
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="7"
+        >
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:shadowColor="#000"
+            android:shadowRadius="1.0"
+            android:textColor="#666666"
+            android:textSize="17sp"
+            android:layout_marginBottom="5dp"
+            android:maxLines="2"
+            android:scrollHorizontally="true"
+            android:ellipsize="end"
+            android:text="This is news title"/>
+
+        <TextView
+            android:id="@+id/details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#777777"
+            android:textSize="16sp"
+            android:maxLines="2"
+            android:minLines="2"
+            android:scrollHorizontally="true"
+            android:ellipsize="end"
+            android:text="This is news description."/>
+
+
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
 
-            <ImageView
-                android:id="@+id/galleryImage"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:scaleType="centerCrop"
-                tools:ignore="UnusedAttribute"
-                />
 
-            <ImageView
-                android:id="@+id/shadow_top"
-                android:layout_alignBottom="@id/galleryImage"
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                />
 
-            <FrameLayout
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/galleryImage"
-                android:padding="5dp"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="20dp"
-                android:layout_marginTop="-50dp">
+                android:layout_weight="1"
+                android:orientation="horizontal">
 
-                <ImageView
-                    android:layout_width="18dp"
-                    android:layout_height="18dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
-                    />
+                <TextView
+                    android:id="@+id/name"
+                    android:textSize="15sp"
+                    android:textColor="#42A5F5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name of source"/>
 
-            </FrameLayout>
+            </LinearLayout>
 
-            <TextView
-                android:id="@+id/title"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-light"
-                android:textStyle="bold"
-                android:textColor="@android:color/holo_red_dark"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:text="Title"
-                android:textSize="17sp"
-                android:layout_marginTop="200dp"
-                android:layout_below="@id/galleryImage"/>
-
-            <TextView
-                android:id="@+id/details"
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:layout_below="@id/title"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginTop="220dp"
-                android:fontFamily="sans-serif-light"
-                android:textStyle="bold"
-                android:textColor="@android:color/black"
-                android:text="Details"
-                android:visibility="invisible"
-                />
-
-            <TextView
-                android:id="@+id/name"
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:layout_below="@id/details"
-                android:layout_marginTop="240dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginBottom="10dp"
-                android:fontFamily="sans-serif-light"
-                android:textStyle="bold"
-                android:textColor="@android:color/black"
-                android:maxLines="1"
-                android:drawablePadding="10dp"
-                android:singleLine="true"
-                android:ellipsize="end"
-                android:text="Name"
-                android:visibility="invisible"
-                />
 
             <TextView
                 android:id="@+id/time"
+                android:gravity="right"
+                android:textSize="14sp"
+                android:textColor="#42A5F5"
                 android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:layout_below="@id/details"
-                android:layout_marginTop="260dp"
-                android:layout_marginBottom="10dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_toRightOf="@id/name"
-                android:fontFamily="sans-serif-light"
-                android:textStyle="bold"
-                android:textColor="@android:color/black"
-                android:maxLines="1"
-                android:drawablePadding="10dp"
-                android:singleLine="true"
-                android:ellipsize="end"
-                android:text="Time"
-                android:visibility="invisible"/>
+                android:layout_height="wrap_content"
+                android:text="Time"/>
+        </LinearLayout>
 
-        </RelativeLayout>
 
-</FrameLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
