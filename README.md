@@ -4,7 +4,7 @@ CS 3354.003 - Software Engineering
 
 ## Contributors
 * Pedro Lopez
-* Abby S
+* Mary Strebel
 * Shaiyaan Reza
 * Juan Marquez
 * Hritik Panchasara
