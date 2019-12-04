@@ -1,6 +1,5 @@
 # Team Dallas
 CS 3354.003 - Software Engineering
-(Can we change the team name?)
 
 ## Contributors
 * Pedro Lopez
