@@ -23,10 +23,31 @@ public class switchTest
 	}
 	
 	@Test
-	//Test invalid activity
+	//Test valid activity
 	public void testTwo()
 	{
+		assertTrue(tester.isValidActivity("Search"));
+	}
+	
+	@Test
+	//Test valid activity
+	public void testThree()
+	{
+		assertTrue(tester.isValidActivity("Save"));
+	}
+	
+	@Test
+	//Test invalid activity
+	public void testFour()
+	{
 		assertFalse(tester.isValidActivity("Weather"));
+	}
+	
+	@Test
+	//Test invalid activity
+	public void testFive()
+	{
+		assertFalse(tester.isValidActivity("Credits"));
 	}
 
 }
