@@ -22,7 +22,6 @@ import java.util.List;
 
 //This will display all the saved articles Mary "Abby" Strebel
 public class Save extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,26 +32,7 @@ public class Save extends AppCompatActivity {
         ProgressBar load = findViewById(R.id.loadSaved);
         listSaved.setEmptyView(load);
 
-        //Checks if permissions are granted, and asks for them if needed
-        PermissionListener permissionlistener = new PermissionListener() {
-            @Override
-            public void onPermissionGranted() {
-                Toast.makeText(Save.this, "Permission Granted", Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void onPermissionDenied(List<String> deniedPermissions) {
-                Toast.makeText(Save.this, "Permission Denied\n" + deniedPermissions.toString(), Toast.LENGTH_SHORT).show();
-            }
-
-        };
-        //check all needed permissions together
-        TedPermission.with(this)
-                .setPermissionListener(permissionlistener)
-                .setDeniedMessage("If you reject permission,you can not use this service\n\nPlease turn on permissions at [Setting] > [Permission]")
-                .setPermissions(Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE)
-                .check();
-
+        checkPermissions();
 
         // Listener for Article clicks
         listSaved.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -64,7 +44,10 @@ public class Save extends AppCompatActivity {
                 startActivity(i);
             }
         });
+        navBar(); //Handles navbar
+    }
 
+    private void navBar(){
         //set up the bottom nav bar
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 
@@ -91,5 +74,27 @@ public class Save extends AppCompatActivity {
                 return false;
             }
         });
+    }
+    private void checkPermissions(){
+        //Checks if permissions are granted, and asks for them if needed
+        PermissionListener permissionlistener = new PermissionListener() {
+            @Override
+            public void onPermissionGranted() {
+                Toast.makeText(Save.this, "Permission Granted", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onPermissionDenied(List<String> deniedPermissions) {
+                Toast.makeText(Save.this, "Permission Denied\n" + deniedPermissions.toString(), Toast.LENGTH_SHORT).show();
+            }
+
+        };
+        //check all needed permissions together
+        TedPermission.with(this)
+                .setPermissionListener(permissionlistener)
+                .setDeniedMessage("If you reject permission,you can not use this service\n\nPlease turn on permissions at [Setting] > [Permission]")
+                .setPermissions(Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                .check();
+
     }
 }
