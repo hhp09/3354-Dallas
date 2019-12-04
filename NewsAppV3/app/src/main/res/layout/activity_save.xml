@@ -7,11 +7,23 @@
     android:layout_height="match_parent"
     tools:context=".Save">
 
-    <TextView
+    <!-- Mary "Abby" Strebel -->
+    <!-- Displays articles similar to the main activity -->
+    <ListView
+        android:id="@+id/listSaved"
+        android:layout_width="411dp"
+        android:layout_height="600dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="2dp"
+        android:background="#FFFFFF"
+        android:divider="#F5F5F5"
+        android:dividerHeight="1dp"
+        android:visibility="visible" />
+
+    <ProgressBar
+        android:id="@+id/loadSaved"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="50sp"
-        android:textStyle="bold"
         android:layout_centerInParent="true"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
