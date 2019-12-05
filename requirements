@@ -12,7 +12,7 @@ Functional requirements
 2. The search function shall allow users to search for news.
 	2.1 The system shall provide a search bar.
 	2.2 The system shall allow users to enter keywords or phrases to search for.
-	2.3 The system shall display relevant articles based on the search input in a WebView instance.
+	2.3 The system shall display relevant articles based on the search input.
 	
 3. The share function shall allow the user to share news.
 	3.1 The system shall allow the user to choose their preferred medium of sharing the link such as email, text, and social media apps like Facebook, Twitter, etc. 
@@ -21,6 +21,7 @@ Functional requirements
 4. The view function shall display the full article to the user
 	4.1 The system shall display any news article selected by the user in a WebView instance. 
 	4.1 The system shall provide a button in the full article layout in order to share the URL of the news article.
+	4.2 The System should provide a button for saving the article
 	
 5. The Save function should allow the user to save articles
 	5.1 The system should display a buttom that allows the user to save an article url
