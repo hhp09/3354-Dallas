@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.PopupMenu;
 import androidx.appcompat.widget.Toolbar;
 
+import android.media.Image;
 import android.os.Bundle;
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,6 +16,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ProgressBar;
 
 public class DisplayFullArticle extends AppCompatActivity {
@@ -30,8 +33,18 @@ public class DisplayFullArticle extends AppCompatActivity {
         //sets the toolbar at the top of screen
         Toolbar myToolbar = findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
-        //this enables the arrow that allows the users to return to the main menu from viewing the article
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //sets up a back button that returns user to previous activity
+        myToolbar.setNavigationIcon(R.drawable.ic_arrow_back_black_24dp);
+        myToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
+
+
+
 
         setTitle("");
 
@@ -112,4 +125,6 @@ public class DisplayFullArticle extends AppCompatActivity {
 
     }
 
+
 }
+
