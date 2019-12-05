@@ -53,4 +53,6 @@ How to Use the Software
   3. Select Save
     * The system was going to save the article data into either a text file in the emulator or in a database
     * The system was going to display all the saved articles in the saved tab
-  
+    
+  We tried getting app permissions by putting them in the android manifest, using the emulators permissions manager and requesting
+  permissions during run time but were still unable to write to external source.
