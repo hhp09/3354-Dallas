@@ -20,11 +20,14 @@ Functional requirements
 
 4. The view function shall display the full article to the user
 	4.1 The system shall display any news article selected by the user in a WebView instance. 
-	4.1 The system shall provide a button in the full article layout in order to share the URL of the news article.
-	4.2 The System should provide a button for saving the article
+	4.2 The system shall provide a button in the full article layout in order to share the URL of the news article.
+	4.3 The System should provide a button for saving the article
 	
 5. The Save function should allow the user to save articles
-	5.1 The system should display a buttom that allows the user to save an article url
+	5.1 The system should display a button that allows the user to save an article url
 	5.2 The article url should be saved in a text file on the device
 	5.3 The System should read the text file and display the urls in a listView
 
+Use Case Diagram
+
+Open useCaseDiagram.pdf to see the use Case Diagram.
