@@ -20,6 +20,8 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ProgressBar;
 
+import java.net.URL;
+
 public class DisplayFullArticle extends AppCompatActivity {
 
     WebView webView;
@@ -123,6 +125,20 @@ public class DisplayFullArticle extends AppCompatActivity {
         Intent shareIntent = Intent.createChooser(sendIntent, null);
         startActivity(shareIntent);
 
+    }
+
+    public boolean urlExists(String testURL){
+
+        boolean result = true;
+
+        try{
+            new URL(testURL).toURI();
+            result = true;
+        }
+        catch (Exception e){
+            result = false;
+        }
+        return result;
     }
 
 

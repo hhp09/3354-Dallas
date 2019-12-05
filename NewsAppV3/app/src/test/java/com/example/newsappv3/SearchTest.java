@@ -10,9 +10,7 @@ public class SearchTest {
     Search tester;
 
     @Before
-    public void setup(){
-        tester = new Search();
-    }
+    public void setup(){ tester = new Search();}
 
     @Test
     // Test a single word
