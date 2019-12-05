@@ -16,7 +16,6 @@ public class ArticleTest {
     @Test //tests .getAll is empty and return url
     public void test1(){
         assertEquals("Testing .getAll","\t\t\t\n",tester.getAll());
-        assertEquals("\nTesting .getUrl","",tester.getUrl());
     }
 
     @Test //Tests populating Article
@@ -25,9 +24,9 @@ public class ArticleTest {
         assertEquals("\n Testing if .getAll retrieves all information","A\tU\tD\tC",tester.getAll());
     }
 
-    @Test //Tests saving Article
+    @Test //Tests if a field is empty
     public void test3(){
-        tester.setInfo("A","U","D","C");
-        assertTrue("\nTesting save to file",tester.saveToFile());
+        tester.setInfo("A","U","D","");
+        assertEquals("\n Testing if .getAll retrieves all information","A\tU\tD\t",tester.getAll());
     }
 }
