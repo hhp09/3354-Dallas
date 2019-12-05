@@ -8,6 +8,7 @@ Location of test class for isValidInput method: NewsAppV3/app/src/test/java/com/
 Location of test class for isValidActivity method: NewsAppV3/app/src/test/java/com/example/newsappv3/switchTest.java
 Location of test class for getAll method: in the Abby-Save branch, NewsAppV3/app/src/test/java/com/example/newsappv3/ArticleTest.java
 Location of test class for API Key Validation: NewsAppV3/app/src/test/java/com/example/newsappv3/apiCallTest.java
+Location of test class for shareTest method: NewsAppV3/app/src/test/java/com/example/newsappv3/shareTest.java
 
 ii. 
 
