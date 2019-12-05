@@ -28,6 +28,3 @@ Functional requirements
 	5.2 The article url should be saved in a text file on the device
 	5.3 The System should read the text file and display the urls in a listView
 
-Use Case Diagram
-
-Open requirements.pdf to see the use Case Diagram.
