@@ -21,11 +21,12 @@ How to Build the Software
 How to Use the Software
 
   Main Functionality
-  1. Once the app is started, the Main Activity is automatically loaded by default. 
-     It displays the breaking news articles by the top 70 US publishers. 
-  2. The Main Activity can be refreshed for new articles in the following ways:
-    * Switch from Main Activity to either Search Activity or Save Activity, and then switch back to Main Activity. This will
-      generate another API call to NewsAPI and refresh the list of articles if the API has any new breaking news to showcase.
+  1. Once the app is started, the Main Activity is automatically loaded by default
+     * It displays the article previews for breaking news articles by the top 70 US publishers. 
+     * Main Activity can be refreshed by switching from Main Activity to either Search Activity or Save Activity, and then switch back to 
+       Main Activity. This will generate another API call to NewsAPI and refresh the list of articles if the API has any new breaking news to showcase.
+  2. Click on any of the previews to see the full article in a web view
+    * Click on the phones built in back button to go from the full article to the article previews
   
   Sharing Functionality
   1. Click on any of the previews to see the full article in a web view
