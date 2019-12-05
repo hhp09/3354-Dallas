@@ -47,3 +47,10 @@ How to Use the Software
   5. Click on any of the previews to see the full article in a web view
       * Click on the phones built in back button to go from the full article to the article previews
   
+  Saving functionality - not implemented due to permissions issues. The following steps is how we planed saving to work
+  1. Click on any of the previews to see the full article in a web view
+  2. Click on the 3 dot icon on the top right corner of the web view
+  3. Select Save
+    * The system was going to save the article data into either a text file in the emulator or in a database
+    * The system was going to display all the saved articles in the saved tab
+  
