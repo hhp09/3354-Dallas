@@ -1,0 +1,11 @@
+1. Newspaper
+  1.1 News
+    1.1.1 Show top news articles from the US
+    1.1.2 Display previews of news sories on the home page
+    1.1.3 Redirect to the full news story once preview article is selected
+    
+  1.2 Interface
+     1.2.1 Back button to take user back to the article previews from the full article
+     1.2.2 Share button to share the URL of a news article
+     1.2.3 Allow user to search for Articles based on keywords
+     1.2.4 Allow user to switch between home, search and save

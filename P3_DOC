@@ -7,7 +7,7 @@ ii.
 Location of test class for isValidInput method: NewsAppV3/app/src/test/java/com/example/newsappv3/SearchTest.java
 Location of test class for isValidActivity method: NewsAppV3/app/src/test/java/com/example/newsappv3/switchTest.java
 Location of test class for getAll method: in the Abby-Save branch, NewsAppV3/app/src/test/java/com/example/newsappv3/ArticleTest.java
-
+Location of test class for API Key Validation: NewsAppV3/app/src/test/java/com/example/newsappv3/apiCallTest.java
 
 ii. 
 
@@ -20,6 +20,13 @@ How to Build the Software
 
 How to Use the Software
 
+  Main Functionality
+  1. Once the app is started, the Main Activity is automatically loaded by default. 
+     It displays the breaking news articles by the top 70 US publishers. 
+  2. The Main Activity can be refreshed for new articles in the following ways:
+    * Switch from Main Activity to either Search Activity or Save Activity, and then switch back to Main Activity. This will
+      generate another API call to NewsAPI and refresh the list of articles if the API has any new breaking news to showcase.
+  
   Sharing Functionality
   1. Click on any of the previews to see the full article in a web view
   2. Click on the 3 dot icon on the top right corner of the web view
